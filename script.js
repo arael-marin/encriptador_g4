@@ -34,10 +34,10 @@ function encriptar(){
                 textoSalida += textoEntrada[i];
         }
     }
-    document.getElementById(texto-salida).value = textoSalida;
+    document.getElementById("texto-salida").value = textoSalida;
 }
 
-function desencriptador(){
+function desencriptar(){
     var textoEntrada= document.getElementById(texto-entrada).value;
     var textoSalida="";
     var palabraActual="";
