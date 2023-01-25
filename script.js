@@ -28,7 +28,7 @@ function encriptar(){
                 textoSalida += "ober";
                 break;
             case "u":
-                textoSalida += "ofat";
+                textoSalida += "ufat";
                 break;
             default:
                 textoSalida += textoEntrada[i];
@@ -38,7 +38,7 @@ function encriptar(){
 }
 
 function desencriptar(){
-    var textoEntrada= document.getElementById(texto-entrada).value;
+    var textoEntrada= document.getElementById("texto-entrada").value;
     var textoSalida="";
     var palabraActual="";
     for (var i =0; i< textoEntrada.length; i++){
@@ -64,7 +64,7 @@ function desencriptar(){
                     textoSalida += "u";
                     palabraActual = "";
                     break;
-            }
+        }
     }
     document.getElementById("texto-salida").value=textoSalida;
 }
