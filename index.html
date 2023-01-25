@@ -11,13 +11,26 @@
 </head>
 
 <body>
-    <form id="formulario">
+
+    <!-- PRIMER CODIGO PARA ENCRIPTADOR -->
+    <!-- <form id="formulario">
         <label for="mensaje">Introduce el mensaje a encriptar</label>
         <br>
         <input type="text" id="mensaje">
         <br>
         <button type="submit">Encriptar</button>
-    </form>
+    </form> -->
+
+    <div>
+        <label> Texto a encriptar:</label>
+        <input type="text" id="texto-entrada">
+        <button onclick="encriptar()">ENCRIPTAR</button>
+        <button onclick="desencriptar()">DESENCRIPTAR</button>
+    </div>
+    <div>
+        <label>Texto encriptado:</label>
+        <input type="text" id="texto-salida">
+    </div>
 
     <script src="/sprint01_encriptador_texto/script.js"></script>
 
