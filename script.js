@@ -37,34 +37,34 @@ function encriptar(){
     document.getElementById("texto-salida").value = textoSalida;
 }
 
-function desencriptar(){
-    var textoEntrada= document.getElementById("texto-entrada").value;
-    var textoSalida="";
-    var palabraActual="";
-    for (var i =0; i< textoEntrada.length; i++){
-        palabraActual += textoEntrada[i];
-            switch (palabraActual){
-                case "enter":
-                    textoSalida += "e";
-                    palabraActual = "";
-                    break;
-                case "imes":
-                    textoSalida += "i";
-                    palabraActual = "";
-                    break;
-                case "ai":
-                    textoSalida += "a";
-                    palabraActual = "";
-                    break;
-                case "ober":
-                    textoSalida += "o";
-                    palabraActual = "";
-                    break;
-                case "ufat":
-                    textoSalida += "u";
-                    palabraActual = "";
-                    break;
-        }
+function desencriptar() {
+  var textoEntrada = document.getElementById("texto-entrada").value;
+  var textoSalida = "";
+  for (var i = 0; i < textoEntrada.length; i++) {
+    switch (textoEntrada.substring(i, i + 20)) {
+      case "enter":
+        textoSalida += "e";
+        i += 4;
+        break;
+      case "imes":
+        textoSalida += "i";
+        i += 3;
+        break;
+      case "ai":
+        textoSalida += "a";
+        i += 1;
+        break;
+      case "ober":
+        textoSalida += "o";
+        i += 3;
+        break;
+      case "ufat":
+        textoSalida += "u";
+        i += 3;
+        break;
+      default:
+        textoSalida += textoEntrada[i];
     }
-    document.getElementById("texto-salida").value=textoSalida;
+  }
+  document.getElementById("texto-salida").value = textoSalida;
 }
