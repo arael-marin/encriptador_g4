@@ -26,3 +26,49 @@ function encriptar (textoEncriptado){
   }
   return textoEncriptado;
 }
+
+//funcion para desencriptar texto
+function encriptarBtn() {
+  const mensajeEncriptado = encriptar(texto.value);
+  mensaje.value=mensajeEncriptado;
+  mensaje.setAttribute("rows","8");
+  texto.value="";
+  mensaje.style.backgroundImage="none";
+  info.style.display="none";
+  copiarbtn.style.display="flex";
+  copiarbtn.focus();
+}
+
+//funcion para desencriptar texto
+
+function desencriptar(textoDesencriptado){
+  let llavesDesencriptacion =[["enter","e"],["imes","i"],["ai","a"],["ober","o"],["ufat","u"]];
+  textoDesencriptado=textoDesencriptado.toLowerCase();
+  for (let i=0; i<llavesDesencriptacion.length; i++){
+    if (textoDesencriptado.includes(llavesDesencriptacion[i][0])){
+      textoDesencriptado=textoDesencriptado.replaceAll(llavesDesencriptacion[i][0],llavesDesencriptacion[i][1]);
+    }
+  }
+return textoDesencriptado;
+}
+
+function desencriptarBtn(){
+  const mensajeDesencriptado =desencriptar(texto.value);
+  mensaje.value=mensajeDesencriptado;
+  mensaje.setAttribute("rows","8");
+  texto.value="";
+  mensaje.style.backgroundImage="none";
+  info.style.display="none";
+  copiarbtn.style.display="flex";
+  copiarbtn.focus();
+}
+
+//funcion para copiar mensaje
+function copiar() {
+  mensaje.select();
+  navigator.clipboard.writeText(mensaje.value);
+  mensaje.value="";
+  info.style.display="block";
+  copiarbtn.style.display="none";
+  mensaje.style.backgroundImage="";
+}
