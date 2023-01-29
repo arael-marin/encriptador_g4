@@ -7,7 +7,7 @@
 // "gato" => "gaitober"
 // gaitober" => "gato"
 
-const texto=document.querySelector(".seccion1texttarea");
+const texto=document.querySelector(".seccion1textarea");
 const mensaje=document.querySelector(".seccion2mensaje");
 const imagen=document.querySelector(".seccion2img");
 const info=document.querySelector(".seccion2info");
@@ -21,7 +21,7 @@ function encriptar (textoEncriptado){
   textoEncriptado = textoEncriptado.toLowerCase();
   for (let i = 0; i < llavesEncriptacion.length; i++){
     if (textoEncriptado.includes(llavesEncriptacion[i][0])){
-      textoEncriptado=textoEncriptado.replace.All(llavesEncriptacion[i][0],llavesEncriptacion[i][1]);
+      textoEncriptado=textoEncriptado.replaceAll(llavesEncriptacion[i][0],llavesEncriptacion[i][1]);
     }
   }
   return textoEncriptado;
@@ -62,7 +62,6 @@ function desencriptarBtn(){
   copiarbtn.style.display="flex";
   copiarbtn.focus();
 }
-
 //funcion para copiar mensaje
 function copiar() {
   mensaje.select();

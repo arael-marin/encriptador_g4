@@ -1,7 +1,7 @@
 @font-face{
-    font-family: 'Barlow', sans-serif;
+    font-family: "Barlow, sans-serif";
     font-style: normal;
-    font-weight: 500px;
+    font-weight: 400;
     font-display: swap;
     src:url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
     unicode-range: U+00-52F, U+1E00-1FFF, U+2200-22FF;
@@ -14,7 +14,7 @@
 body {
     background: #d8caa9;
     font-family: 'Barlow', sans-serif;
-    font-weight: 500px;
+    font-weight: 400;
 }
 .espacio-a{
     display: grid;
@@ -145,7 +145,7 @@ body {
     background-size: 250px;
     border: none;
     font-style: normal;
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 32px;
     line-height: 150%;
     color:#1d3d1c;
