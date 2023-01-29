@@ -1,20 +1,288 @@
+/* revisar esta tipografia no carga aun en pagina */
+/* font-family: 'Montserrat', sans-serif; */
+@font-face{
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body {
-    font-family: 'Montserrat', sans-serif;
+    background: #d8caa9;
+    font-family: 'Inter', sans-serif;
 }
-header {
-    background-color: #ac1d1d;
-    padding: 20px 0;
+.espacio-a{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: minmax(70px, auto) 80vh minmax(50px,auto);
+    height: 100vh;
+    /* revisar como funciona lo que sigue */
+    grid-template-areas:
+    "leyenda leyenda"
+    "seccion1 seccion2"
+    "piedepagina piedepagina";
 }
-.logo {
-    /* Vector */
 
-position: absolute;
-left: 36.67%;
-right: 37.43%;
-top: 0%;
-bottom: 0%;
+/* el css de el area-a */
+.espacio-a .leyenda {
+    grid-area: leyenda;
+    display: grid;
+    align-items: center;
+    justify-content: left;
+    grid-template-columns: 0.1fr 1fr;
+}
 
-/* Dark blue/dark-blue-300 */
-background: #0A3871;
+.leyendaimg {
+    margin-top: 40px;
+    place-self: center;
+}
 
+.leyendatitulo{
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: x-large;
+    color: #0A3871;
+}
+/* css del area de encriptador */
+.espacio-a .seccion1{
+    grid-area: seccion1;
+    display: grid;
+    grid-template-rows: 2.5fr 0.1fr 0.4fr;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.seccion1textarea {
+    background: none;
+    border: none;
+    margin: 20px 20px 20px 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: rgb(13, 88, 228);
+    resize: none;
+}
+.seccion1textarea::placeholder {
+    font-style: normal;
+    font-weight:400;
+    font-size: 32px;
+    line-height: 150%;
+    color: rgb(126, 93, 5);
+    }
+.seccion1textarea:focus {
+    outline: none;
+}
+.condiciones {
+    display: grid;
+    margin-left: 40px;
+    grid-auto-flow: column;
+    justify-content: flex-start;
+}
+.signo-admiracion {
+    width: 30px;
+    height: 30px;
+    margin-top: -8px;
+}
+.condiciones p {
+    margin-left: 10px ;
+}    
+.seccion1botones {
+    display:grid;
+    grid-auto-flow: column;
+}
+#encriptar {
+    background: #af5909;
+    color: #fff;
+}
+#desencriptar{
+    background: #ffe8b8;
+    color: #af5909;
+    border-color: #af5909;
+}
+.botones {
+    margin: 20px;
+    border-radius: 18px;
+    width:300px;
+    height:60px;
+    border: 1px solid;
+    font-size: 16px;
+    cursor:pointer;
+    box-shadow: 1px 8px 8px 1px #573517;
+}
+.botones:hover{
+    font-size: 19px
+}
+/* css del mensaje ecriptado o desencriptado */
+.espacio-a .seccion2 {
+    grid-area: seccion2;
+    display: grid;
+    background: #fff;
+    border-radius: 32px;
+    margin: 20px;
+    margin-right: 120px;
+    min-width: 340px;
+}
+.seccion2info {
+    margin: 0 32px;
+    text-align: center;
+    color: #225e5c;
+}
+.seccion2mensaje::placeholder{
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    color: #573517;
+    opacity: 1;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.seccion2mensaje {
+    background-image: url(imagenes/engrane.png);
+    background-repeat: no-repeat;
+    background-position:center ;
+    background-size: 250px;
+    border: none;
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 32px;
+    line-height: 150%;
+    color:#ffe8b8;
+    text-align: center;
+    resize: none;
+    margin: 0 auto;
+    width: 250px;
+    margin-top:50px;
+}
+.seccion2mensaje:focus {
+    outline: none;
+}
+.botones .botoncopiar {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #ffe8b8;
+    border-color: #573517;
+    background-color: #fff;
+}
+/* css de pie de pagina */
+.espacio-a .piedepagina {
+    grid-area: piedepagina;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+}
+.textofooter{    
+    margin-right: 10px;
+    text-align: center;    
+}
+.imgfooter-linkedin {
+    width: 115px;
+    height: 30px;
+    margin-right: 10px;
+}
+.imgfooter-github {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* DISEÑO RESPONSIVE */
+@media screen and (max-width:1060px){
+    .espacio-a {
+        max-width: 700px;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 6fr 1fr 1fr;
+        grid-template-areas: 
+        "leyenda"
+        "seccion1"
+        "seccion2"
+        "piedepagina";
+    }
+    .espacio-a .seccion1 {
+        grid-area: seccion1;
+        display: grid;
+        grid-template-rows: 400px 10px 100px;
+    }
+    
+    .seccion1textarea {
+        height: 350px;
+        width: 600px;
+    }
+    .seccion1botones {
+        margin: 0 auto;        
+    }
+
+    .espacio-a .seccion2 {
+        justify-content: center;
+        height: 350px;
+    }
+    .seccion2 {
+        width: 95%;
+    }
+    .seccion2mensaje{
+        background-image: none;
+    }
+    .seccion2info {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .seccion2mensaje {
+        width: 500px;
+        height: 250px;
+    }
+    .botones .botoncopiar {
+        width: auto;
+        margin-top: -50px;
+    }
+}
+@media screen and (max-width:690px) {
+    .leyendaimg{
+        margin-left: 10px;        
+    }
+    .seccion1textarea{
+        height: 300px;
+        width: 300px;
+    }
+    .seccion1botones{
+        grid-auto-flow: row;
+    }
+    .espacio-a .seccion1 {
+        grid-template-rows: 362px 10px 175px;
+    }
+    .condiones{
+        margin-left: 10px;
+        justify-content: center;
+    }
+    .botones{
+        margin: 5px;
+    }
+    .espacio-a .seccion2{
+        justify-content: center;
+        height: 300px;
+        width: 300px;
+        margin: 0 auto;
+    }
+    .seccion2mensaje {
+        width: 290px;
+        height: 200px;
+    }
+    .espacio-a .piedepagina {
+        margin-top: 100px;
+        font-size: 0.75rem;
+    }
+    .botoncopiar {
+        width: auto;
+        margin-top: 30px;
+    }
 }
