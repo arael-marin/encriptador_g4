@@ -21,7 +21,6 @@ body {
     grid-template-columns: 3fr 1fr;
     grid-template-rows: minmax(70px, auto) 80vh minmax(50px,auto);
     height: 100vh;
-    /* revisar como funciona lo que sigue */
     grid-template-areas:
     "leyenda leyenda"
     "seccion1 seccion2"
