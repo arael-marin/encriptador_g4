@@ -1,11 +1,10 @@
-/* revisar esta tipografia no carga aun en pagina */
-/* font-family: 'Montserrat', sans-serif; */
 @font-face{
-    font-family: "Montserrat";
+    font-family: 'Barlow', sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500px;
     font-display: swap;
-    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+    src:url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+    unicode-range: U+00-52F, U+1E00-1FFF, U+2200-22FF;
 }
 *{
     padding: 0;
@@ -14,7 +13,8 @@
 }
 body {
     background: #d8caa9;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500px;
 }
 .espacio-a{
     display: grid;
@@ -27,7 +27,6 @@ body {
     "seccion1 seccion2"
     "piedepagina piedepagina";
 }
-
 /* el css de el area-a */
 .espacio-a .leyenda {
     grid-area: leyenda;
@@ -36,12 +35,10 @@ body {
     justify-content: left;
     grid-template-columns: 0.1fr 1fr;
 }
-
 .leyendaimg {
     margin-top: 40px;
     place-self: center;
 }
-
 .leyendatitulo{
     margin-top: 40px;
     font-weight: 600;
@@ -118,7 +115,7 @@ body {
 .botones:hover{
     font-size: 19px
 }
-/* css del mensaje ecriptado o desencriptado */
+/* css del mensaje encriptado o desencriptado */
 .espacio-a .seccion2 {
     grid-area: seccion2;
     display: grid;
@@ -142,7 +139,6 @@ body {
     line-height: normal;
     vertical-align: middle;
 }
-
 .seccion2mensaje {
     background-image: url(imagenes/engrane.png);
     background-repeat: no-repeat;
@@ -153,7 +149,7 @@ body {
     font-weight: 400px;
     font-size: 32px;
     line-height: 150%;
-    color:#ffe8b8;
+    color:#1d3d1c;
     text-align: center;
     resize: none;
     margin: 0 auto;
@@ -163,11 +159,11 @@ body {
 .seccion2mensaje:focus {
     outline: none;
 }
-.botones .botoncopiar {
+.botoncopiar.botones{
     display: none;
     align-items: center;
     justify-content: center;
-    color: #ffe8b8;
+    color: #690188;
     border-color: #573517;
     background-color: #fff;
 }
@@ -178,8 +174,7 @@ body {
     grid-auto-flow: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    
+    padding: 10px;    
 }
 .textofooter{    
     margin-right: 10px;
@@ -195,7 +190,6 @@ body {
     height: 40px;
     margin-right: 10px;
 }
-
 /* DISEÑO RESPONSIVE */
 @media screen and (max-width:1060px){
     .espacio-a {
@@ -214,7 +208,6 @@ body {
         display: grid;
         grid-template-rows: 400px 10px 100px;
     }
-    
     .seccion1textarea {
         height: 350px;
         width: 600px;
@@ -222,7 +215,6 @@ body {
     .seccion1botones {
         margin: 0 auto;        
     }
-
     .espacio-a .seccion2 {
         justify-content: center;
         height: 350px;
@@ -241,7 +233,7 @@ body {
         width: 500px;
         height: 250px;
     }
-    .botones .botoncopiar {
+    .botoncopiar.botones {
         width: auto;
         margin-top: -50px;
     }
@@ -281,8 +273,4 @@ body {
         margin-top: 100px;
         font-size: 0.75rem;
     }
-    .botoncopiar {
-        width: auto;
-        margin-top: 30px;
-    }
-}
+} 
