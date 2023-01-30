@@ -62,12 +62,26 @@ function desencriptarBtn(){
   copiarbtn.style.display="flex";
   copiarbtn.focus();
 }
+
 //funcion para copiar mensaje
-function copiar() {
-  mensaje.select();
-  navigator.clipboard.writeText(mensaje.value);
-  mensaje.value="";
-  info.style.display="block";
-  copiarbtn.style.display="none";
-  mensaje.style.backgroundImage="";
+
+// function copiar() {
+//   mensaje.select();
+//   navigator.clipboard.writeText(mensaje.value);
+//   mensaje.value="";
+//   info.style.display="block";
+//   copiarbtn.style.display="none";
+//   mensaje.style.backgroundImage="";
+// }
+
+async function copiar(){ 
+  try{
+    await navigator.clipboard.writeText(mensaje.value);
+          mensaje.value="";
+          info.style.display="block";
+          copiarbtn.style.display="none";
+          mensaje.style.backgroundImage="";
+  } catch (e) {
+    console.log (e);
+  }
 }

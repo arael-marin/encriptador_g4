@@ -52,7 +52,6 @@ body {
     margin: 0 auto;
     align-items: center;
 }
-
 .seccion1textarea {
     background: none;
     border: none;
@@ -164,7 +163,7 @@ body {
     justify-content: center;
     color: #690188;
     border-color: #573517;
-    background-color: #fff;
+    background-color: #fff;   
 }
 /* css de pie de pagina */
 .espacio-a .piedepagina {
