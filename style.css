@@ -86,6 +86,7 @@ body {
     width: 30px;
     height: 30px;
     margin-top: -8px;
+    filter: hue-rotate(120deg);
 }
 .condiciones p {
     margin-left: 10px ;
