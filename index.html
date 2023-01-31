@@ -7,26 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="imagenes/cube-rubik.png" type="image/x-icon">
+    <link rel="shortcut icon" href="imagenes/cube-rubik.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap" rel="stylesheet">
     <title>Encriptador</title>
 </head>
 
-<body>
-    <main class="espacio-a">
-        <header class="leyenda">
+<body>    
+    <main class="espacio-a">        
+        <header class="leyenda">           
             <h1 class="leyendaimg"><img src="imagenes/Logo.png" alt="Logo Alura Oracle One"></h1>
             <h1 class="leyendatitulo">Encriptador de texto</h1>
         </header>
         <section class="seccion1">
-            <textarea class="seccion1textarea" cols="auto" rows="6" placeholder="Escriba Aqui"></textarea>
+                       
+            <textarea class="seccion1textarea" cols="auto" rows="6" placeholder="Escriba Aqui"></textarea>            
             <div class="condiciones">
                 <img class="signo-admiracion" src="imagenes/admiracion.png" alt="condiciones">
                 <p>Solo letras minusculas y sin acentos</p>
             </div>
             <div class="seccion1botones">
+                
                 <button id="encriptar" class="botones" onclick="encriptarBtn()">ENCRIPTAR</button>
                 <button id="desencriptar" class="botones" onclick="desencriptarBtn()">DESENCRIPTAR</button>
             </div>
@@ -36,13 +38,14 @@
                 rows="8"></textarea>
             <p class="seccion2info">Ingrese texto para encriptar o desencriptar</p>
             <button class="botones botoncopiar" onclick="copiar()">COPIAR</button>
-        </section>
-        <footer class="piedepagina">
-            <p class="textofooter">Creado por Marín Salazar <br> <br> Enero 2023 <br><br></p>
+        </section>       
+        <footer class="piedepagina">            
+            <p class="textofooter">Creado por Marín Salazar <br> <br> Enero 2023 <br><br></p>           
             <a href="https://www.linkedin.com/in/arael-marin/" target="_blank">
-                <img class="imgfooter-linkedin" src="imagenes/linkedin.png" alt="Mi linkedin">
+                <span class="loader"></span>                
+                <img class="imgfooter-linkedin" src="imagenes/linkedin.png" alt="Mi linkedin">                
             </a>
-            <a href="https://github.com/arael-marin" target="_blank">
+            <a href="https://github.com/arael-marin" target="_blank">               
                 <img class="imgfooter-github" src="imagenes/github.png" alt="Mi github">
             </a>
         </footer>
