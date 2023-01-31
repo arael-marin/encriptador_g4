@@ -346,7 +346,7 @@ animation: glowing 15s linear infinite;
         width: 290px;
         height: 180px;
     }
-    /* acomodar loader en celular */
+    /* acomodar loader en celular centrado arriba de linkedin revisar */
     .loader::after,
     .loader::before{
         position: fixed;
