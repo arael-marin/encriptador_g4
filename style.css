@@ -351,7 +351,7 @@ animation: glowing 15s linear infinite;
     .loader::before{
         position: fixed;
         top: 92%;
-        left: 55%;
+        left: 54%;
     }
     .espacio-a .piedepagina {
         margin-top: 100px;
