@@ -331,7 +331,8 @@ animation: glowing 15s linear infinite;
 
 
 /* @media screen and (max-width:720px)  */
- @media (min-width: 720px) /*and (orientation: landscape) */
+ /* @media screen and (min-width: 720px) and (orientation: landscape) */
+ @media (min-width: 810px) and (orientation: landscape)
 {
         .leyendaimg{
         margin-left: 10px;        
@@ -348,7 +349,7 @@ animation: glowing 15s linear infinite;
         }
         .condiciones{
             margin-left: 10px;
-            justify-content: center; /*aqui estoy moviendo a un lado*/
+            justify-content: left; /*aqui estoy moviendo a un lado*/
         }
         .botones{
             margin: 10px;
