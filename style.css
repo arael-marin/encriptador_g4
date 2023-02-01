@@ -240,7 +240,7 @@ animation: glowing 15s linear infinite;
         animation-delay: 1s;        
     }
 /* diseño responsive */
-/* pantallas pc */
+/* pantallas pc ok */
 @media screen and (max-width:1060px){
     .espacio-a {
         max-width: 700px;
@@ -289,7 +289,7 @@ animation: glowing 15s linear infinite;
     }
 }
 /* diseño responsive */
-/* pantallas celular */
+/* pantallas celular vertical ok */
 @media screen and (max-width:690px) {
     .leyendaimg{
         margin-left: 10px;        
@@ -304,7 +304,7 @@ animation: glowing 15s linear infinite;
     .espacio-a .seccion1 {
         grid-template-rows: 362px 10px 175px;
     }
-    .condiones{
+    .condiciones{
         margin-left: 10px;
         justify-content: center;
     }
@@ -319,34 +319,39 @@ animation: glowing 15s linear infinite;
     }
     .seccion2mensaje {        
         width: 290px;
-        height: 180px;
+        height: 200px;
     }
     .espacio-a .piedepagina {
         margin-top: 100px;
         font-size: 0.75rem;
     }
-    /* nota:falta hacer diseño responsive para celular en horizontal */
+/* diseño responsive */
+/* pantallas celular horizontal ********checando*******/
 
-/* @media screen and (max-width:810px) {
+
+
+/* @media screen and (max-width:720px)  */
+ @media (min-width: 720px) /*and (orientation: landscape) */
+{
         .leyendaimg{
         margin-left: 10px;        
         }
         .seccion1textarea{
-            height: 300px;
-            width: 300px;
+            height: 400px;
+            width: 400px;
         }
         .seccion1botones{
             grid-auto-flow: row;
         }
         .espacio-a .seccion1 {
-            grid-template-rows: 362px 10px 175px;
+            grid-template-rows: 462px 10px 215px;
         }
-        .condiones{
+        .condiciones{
             margin-left: 10px;
-            justify-content: center;
+            justify-content: center; /*aqui estoy moviendo a un lado*/
         }
         .botones{
-            margin: 5px;
+            margin: 10px;
         }
         .espacio-a .seccion2{
             justify-content: center;
@@ -357,9 +362,6 @@ animation: glowing 15s linear infinite;
         .seccion2mensaje {
             width: 290px;
             height: 180px; 
-            padding: auto;
-            width: 300px;
-            height: 300px;
         }
         .seccion2info {
             margin: 0 auto;
@@ -369,5 +371,11 @@ animation: glowing 15s linear infinite;
             margin-top: 100px;
             font-size: 0.75rem;
         }
-    } */
+    } 
+
+
+
+
+
+
 }
