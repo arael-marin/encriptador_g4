@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,21 +12,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap" rel="stylesheet">
     <title>Encriptador</title>
 </head>
-
 <body>    
-    <main class="espacio-a">        
+    <main class="espacio-a">  
+        <span class="loader"> </span> 
         <header class="leyenda">           
             <h1 class="leyendaimg"><img src="imagenes/Logo.png" alt="Logo Alura Oracle One"></h1>
             <h1 class="leyendatitulo">ENCRIPTADOR</h1>
         </header>
-        <section class="seccion1">                       
-            <textarea class="seccion1textarea" cols="auto" rows="6" placeholder="Escriba Aqui"></textarea>            
+        <section class="seccion1">                                   
+            <textarea class="seccion1textarea" cols="auto" rows="6" placeholder="Escriba Aqui"></textarea>                        
             <div class="condiciones">
                 <img class="signo-admiracion" src="imagenes/admiracion.png" alt="condiciones">
                 <p>Solo letras minúsculas y sin acentos</p>
             </div>
             <div class="seccion1botones">
-                <!-- quitar id si no se van a ocupar -->
                 <button class="botones" onclick="encriptarBtn()">ENCRIPTAR</button>
                 <button class="botones" onclick="desencriptarBtn()">DESENCRIPTAR</button>
             </div>
@@ -40,8 +38,7 @@
         </section>       
         <footer class="piedepagina">            
             <p class="textofooter">Creado por Marín Salazar <br> <br> Enero 2023 <br> <br></p>           
-            <a href="https://www.linkedin.com/in/arael-marin/" target="_blank">
-                <span class="loader"></span>                
+            <a href="https://www.linkedin.com/in/arael-marin/" target="_blank">                              
                 <img class="imgfooter-linkedin" src="imagenes/linkedin.png" alt="Mi linkedin">                
             </a>
             <a href="https://github.com/arael-marin" target="_blank">               
@@ -51,5 +48,4 @@
     </main>
     <script src="script.js"></script>
 </body>
-
 </html>

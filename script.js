@@ -6,13 +6,11 @@
 // Por ejemplo:
 // "gato" => "gaitober"
 // gaitober" => "gato"
-
 const texto=document.querySelector(".seccion1textarea");
 const mensaje=document.querySelector(".seccion2mensaje");
 const imagen=document.querySelector(".seccion2img");
 const info=document.querySelector(".seccion2info");
 const copiarbtn=document.querySelector(".botoncopiar");
-
 texto.value="";
 mensaje.value="";
 // funcion para encriptar texto
@@ -26,8 +24,7 @@ function encriptar (textoEncriptado){
   }
   return textoEncriptado;
 }
-
-//funcion para desencriptar texto
+//funcion boton encriptar texto
 function encriptarBtn() {
   const mensajeEncriptado = encriptar(texto.value);
   mensaje.value=mensajeEncriptado;
@@ -38,9 +35,7 @@ function encriptarBtn() {
   copiarbtn.style.display="flex";
   copiarbtn.focus();
 }
-
 //funcion para desencriptar texto
-
 function desencriptar(textoDesencriptado){
   let llavesDesencriptacion =[["enter","e"],["imes","i"],["ai","a"],["ober","o"],["ufat","u"]];
   textoDesencriptado=textoDesencriptado.toLowerCase();
@@ -51,7 +46,7 @@ function desencriptar(textoDesencriptado){
   }
 return textoDesencriptado;
 }
-
+//funcion boton desencriptar texto
 function desencriptarBtn(){
   const mensajeDesencriptado =desencriptar(texto.value);
   mensaje.value=mensajeDesencriptado;
@@ -62,9 +57,7 @@ function desencriptarBtn(){
   copiarbtn.style.display="flex";
   copiarbtn.focus();
 }
-
 //funcion para copiar mensaje
-
 // function copiar() {
 //   mensaje.select();
 //   navigator.clipboard.writeText(mensaje.value);
@@ -73,7 +66,6 @@ function desencriptarBtn(){
 //   copiarbtn.style.display="none";
 //   mensaje.style.backgroundImage="";
 // }
-
 async function copiar(){ 
   try{
     await navigator.clipboard.writeText(mensaje.value);

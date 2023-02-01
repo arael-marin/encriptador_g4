@@ -216,7 +216,7 @@ animation: glowing 15s linear infinite;
         transform: scale(0);
         opacity:1;
         }
-        100% {
+    100% {
         transform: scale(1);
         opacity:0;
         }
@@ -226,21 +226,20 @@ animation: glowing 15s linear infinite;
         animation:loader 1s linear infinite;
         content:"";
         border: 15px solid rgb(8, 122, 228);
-        width: 32px;
-        height: 32px;
-        position: fixed;
-        top: 92%;
-        left: 50.7%;
+        width: 62px;
+        height: 62px;
+        position: absolute;
+        top: 90%;
+        left: 49.9%;
         border-radius: 50%;
-        margin-right: 14px;
-        
-    }
+        margin-right: 14px;        
+    } 
     .loader::after{
         opacity: 0;
-        animation-delay: 1s;        
+        animation-delay: 3s;        
     }
 /* diseño responsive */
-/* pantallas pc ok */
+/* pantallas pc */
 @media screen and (max-width:1060px){
     .espacio-a {
         max-width: 700px;
@@ -281,15 +280,28 @@ animation: glowing 15s linear infinite;
     }
     .seccion2mensaje {
         width: 500px;
-        height: 350px;
+        height: 100px;
     }
     .botoncopiar.botones {
         width: auto;
-        margin-top: -50px;
+        margin-top: -10px;
+    }
+    .loader::after,
+    .loader::before {
+        animation:loader 1s linear infinite;
+        content:"";
+        border: 10px solid rgb(8, 122, 228);
+        width: 62px;
+        height: 62px;
+        position: absolute;
+        top: 325.8%;
+        left: 50.6%;
+        border-radius: 50%;
+        margin-right: 10px;        
     }
 }
 /* diseño responsive */
-/* pantallas celular vertical ok */
+/* pantallas celular */
 @media screen and (max-width:690px) {
     .leyendaimg{
         margin-left: 10px;        
@@ -325,58 +337,17 @@ animation: glowing 15s linear infinite;
         margin-top: 100px;
         font-size: 0.75rem;
     }
-/* diseño responsive */
-/* pantallas celular horizontal ********checando*******/
-
-
-
-/* @media screen and (max-width:720px)  */
- /* @media screen and (min-width: 720px) and (orientation: landscape) */
- @media (min-width: 810px) and (orientation: landscape)
-{
-        .leyendaimg{
-        margin-left: 10px;        
-        }
-        .seccion1textarea{
-            height: 400px;
-            width: 400px;
-        }
-        .seccion1botones{
-            grid-auto-flow: row;
-        }
-        .espacio-a .seccion1 {
-            grid-template-rows: 462px 10px 215px;
-        }
-        .condiciones{
-            margin-left: 10px;
-            justify-content: left; /*aqui estoy moviendo a un lado*/
-        }
-        .botones{
-            margin: 10px;
-        }
-        .espacio-a .seccion2{
-            justify-content: center;
-            height: 300px;
-            width: 300px;
-            margin: 0 auto;
-        }
-        .seccion2mensaje {
-            width: 290px;
-            height: 180px; 
-        }
-        .seccion2info {
-            margin: 0 auto;
-            text-align: center;
-        }        
-        .espacio-a .piedepagina {
-            margin-top: 100px;
-            font-size: 0.75rem;
-        }
-    } 
-
-
-
-
-
-
+    .loader::after,
+    .loader::before {
+        animation:loader 1s linear infinite;
+        content:"";
+        border: 10px solid rgb(8, 122, 228);
+        width: 72px;
+        height: 72px;
+        position: absolute;
+        top: 139.5%;
+        left: 44.5%;
+        border-radius: 50%;
+        margin-right: 10px;       
+    }
 }
