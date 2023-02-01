@@ -95,18 +95,6 @@ body {
     display:grid;
     grid-auto-flow: column;
 }
-
-/* #encriptar {
-    background: #af5909;
-    color: #fff;
-} */
-
-/* #desencriptar{
-    background: #ffe8b8;
-    color: #af5909;
-    border-color: #af5909;
-} */
-
 .botones {
     background: black;
     cursor: pointer;
@@ -118,17 +106,8 @@ body {
     position: relative;
     border-radius: 18px;
     margin: 20px;
-
-    /* codigo anterior */
-
-    /* margin: 20px;
-    border-radius: 18px;
     width:300px;
     height:60px;
-    border: 1px solid;
-    font-size: 16px;
-    cursor:pointer;
-    box-shadow: 1px 8px 8px 1px #573517; */
 }
 .botones::before {
 content: "";
@@ -144,7 +123,6 @@ border-radius: 10px;
 filter: blur(12px);
 animation: glowing 15s linear infinite;
 }
-
 @keyframes glowing {
 0%{
     background-position: 400% 0;
@@ -153,9 +131,8 @@ animation: glowing 15s linear infinite;
     background-position: 0 0;
 } 
 }
-
 .botones:hover{
-    font-size: 18px
+    font-size: 20px
 }
 /* css del mensaje encriptado o desencriptado */
 .espacio-a .seccion2 {
@@ -165,7 +142,7 @@ animation: glowing 15s linear infinite;
     border-radius: 32px;
     margin: 20px;
     margin-right: 120px;
-    min-width: 340px;
+    min-width: 360px;
 }
 .seccion2info {
     margin: 0 32px;
@@ -207,8 +184,6 @@ animation: glowing 15s linear infinite;
     align-items: center;
     justify-content: center;
     margin: 40px;
-    /* color: #690188;
-    border-color: #573517;*/
     color: #0A3871;
     background-color: #00EEFF;    
 }
@@ -235,7 +210,6 @@ animation: glowing 15s linear infinite;
     height: 40px;
     margin-right: 10px;
 }
-
 /* loader*/
 @keyframes loader {
     0% {
@@ -249,9 +223,9 @@ animation: glowing 15s linear infinite;
     }
     .loader::after,
     .loader::before{
-        animation:loader 2s linear infinite;
+        animation:loader 1s linear infinite;
         content:"";
-        border: 16px solid rgb(8, 122, 228);
+        border: 15px solid rgb(8, 122, 228);
         width: 32px;
         height: 32px;
         position: fixed;
@@ -263,8 +237,7 @@ animation: glowing 15s linear infinite;
     }
     .loader::after{
         opacity: 0;
-        animation-delay: 1s;
-        
+        animation-delay: 1s;        
     }
 /* diseño responsive */
 /* pantallas pc */
@@ -315,7 +288,8 @@ animation: glowing 15s linear infinite;
         margin-top: -50px;
     }
 }
-/* pantallas celular y tablet */
+/* diseño responsive */
+/* pantallas celular */
 @media screen and (max-width:690px) {
     .leyendaimg{
         margin-left: 10px;        
@@ -343,20 +317,57 @@ animation: glowing 15s linear infinite;
         width: 300px;
         margin: 0 auto;
     }
-    .seccion2mensaje {
+    .seccion2mensaje {        
         width: 290px;
         height: 180px;
-    }
-    /* acomodar loader en celular centrado arriba de linkedin revisar */
-    .loader::after,
-    .loader::before{
-        position: fixed;
-        top: 92%;
-        left: 54%;
     }
     .espacio-a .piedepagina {
         margin-top: 100px;
         font-size: 0.75rem;
     }
-    /* falta hacer distribucion para celular en horizontal */
-} 
+    /* nota:falta hacer diseño responsive para celular en horizontal */
+
+/* @media screen and (max-width:810px) {
+        .leyendaimg{
+        margin-left: 10px;        
+        }
+        .seccion1textarea{
+            height: 300px;
+            width: 300px;
+        }
+        .seccion1botones{
+            grid-auto-flow: row;
+        }
+        .espacio-a .seccion1 {
+            grid-template-rows: 362px 10px 175px;
+        }
+        .condiones{
+            margin-left: 10px;
+            justify-content: center;
+        }
+        .botones{
+            margin: 5px;
+        }
+        .espacio-a .seccion2{
+            justify-content: center;
+            height: 300px;
+            width: 300px;
+            margin: 0 auto;
+        }
+        .seccion2mensaje {
+            width: 290px;
+            height: 180px; 
+            padding: auto;
+            width: 300px;
+            height: 300px;
+        }
+        .seccion2info {
+            margin: 0 auto;
+            text-align: center;
+        }        
+        .espacio-a .piedepagina {
+            margin-top: 100px;
+            font-size: 0.75rem;
+        }
+    } */
+}
